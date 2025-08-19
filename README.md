@@ -39,7 +39,7 @@ Everme consists of the following puzzle pieces:
 
 -   client-side only frontend
 -   betterauth for authentication, with massa plugin for alternative auth through massa station and lit protocol plugin for embedded wallet generation.
--   polar for subscription management
+-   polar (or dodo payments) for subscription management
 -   massa chain with forked deweb smart contract
 -   server side automations (e.g. temporarily publish pages, take down pages)
 
@@ -71,11 +71,13 @@ A sellable product that allows users to create a basic everme
 -   Register, connect, change a massa domain
 -   authenticate with passkey, email or massa station
 -   if not authenticated with massa station, autogenerates embedded massa wallet
--   payment method management through polar, manage usage based billing
+-   payment method management through polar (or dodo payments), manage usage based billing
 -   view invoices
 -   manage authentication methods
+-   forked deweb smart contract
+    -   funds locked in pages are released back to everme, not user
 
-Payment is submitted through polar in fiat and then accredited to the user within the everme massa smart contract.
+Payment is submitted through polar (or dodo payments) in fiat and then accredited to the user within the everme massa smart contract. If signed in with massa station, they can alternatively decide to top up a crypto balance
 
 ## Money laundering protection
 
